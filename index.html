@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevMemory</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                    <h1>DevMemory</h1>
+                    <p class="subtitle">Organize e acesse seus comandos rapidamente</p>
+                </div>
+                <div style="display: flex; gap: 8px;">
+                    <button id="darkModeBtn" style="background: rgba(255,255,255,0.2); padding: 8px 12px;">🌙</button>
+                    <button id="settingsBtn" style="background: rgba(255,255,255,0.2); padding: 8px 12px;">⚙️</button>
+                </div>
+            </div>
+        </header>
+
+        <div class="topic-section">
+            <div class="topic-controls">
+                <div class="topic-select-wrapper">
+                    <select id="topicSelect">
+                        <option value="">Selecione um tópico</option>
+                    </select>
+                </div>
+                <button id="editTopicBtn" disabled title="Editar tópico">✏️</button>
+                <button id="refreshBtn" title="Recarregar">🔄</button>
+                <button id="addTopicBtn">+ Tópico</button>
+            </div>
+        </div>
+
+        <div class="command-section">
+            <div class="command-header">
+                <div class="command-header-left">
+                    <h2>Comandos</h2>
+                    <div class="command-count" id="commandCount">0 comandos</div>
+                </div>
+                <div style="display: flex; gap: 6px;">
+                    <button id="reorderBtn" disabled>↕️ Organizar</button>
+                    <button id="addCommandBtn" disabled>+ Comando</button>
+                </div>
+            </div>
+            <input type="text" id="searchInput" placeholder="🔍 Buscar..." style="display: none; margin-bottom: 12px;">
+            <div id="commandList" class="command-list"></div>
+        </div>
+    </div>
+
+    <div id="topicModal" class="modal">
+        <div class="modal-content">
+            <h3>Novo Tópico</h3>
+            <input type="text" id="topicInput" placeholder="Nome do tópico">
+            <select id="topicTypeSelect">
+                <option value="command">Comandos</option>
+                <option value="credential">Credenciais</option>
+                <option value="list">Lista</option>
+                <option value="json">JSON</option>
+                <option value="text">Texto</option>
+            </select>
+            <div class="modal-buttons">
+                <button id="saveTopicBtn">Salvar</button>
+                <button id="cancelTopicBtn">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="commandModal" class="modal">
+        <div class="modal-content">
+            <h3>Novo Item</h3>
+            <input type="text" id="commandTitleInput" placeholder="Título (opcional)">
+            
+            <div id="commandFields">
+                <textarea id="commandInput" placeholder="Comando"></textarea>
+            </div>
+            
+            <div id="credentialFields" style="display: none;">
+                <input type="text" id="credentialLoginInput" placeholder="Login/CPF/Email">
+                <input type="password" id="credentialPasswordInput" placeholder="Senha">
+            </div>
+            
+            <div id="listFields" style="display: none;">
+                <textarea id="listItemInput" placeholder="Item da lista"></textarea>
+            </div>
+            
+            <div id="jsonFields" style="display: none;">
+                <textarea id="jsonInput" placeholder='{"key": "value"}' style="min-height: 150px; font-family: monospace;"></textarea>
+                <button type="button" id="formatJsonBtn" style="width: 100%; margin-top: -6px; background: #f7f8fa; color: #1c1e21; border: 1px solid #d0d5dd;">✨ Formatar JSON</button>
+            </div>
+            
+            <div id="textFields" style="display: none;">
+                <textarea id="textInput" placeholder="Seu texto aqui..." style="min-height: 150px;"></textarea>
+            </div>
+            
+            <div class="modal-buttons">
+                <button id="saveCommandBtn">Salvar</button>
+                <button id="cancelCommandBtn">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="settingsModal" class="modal">
+        <div class="modal-content">
+            <h3>Configurações</h3>
+            
+            <div style="margin-bottom: 16px;">
+                <label style="display: block; margin-bottom: 8px; color: #1c1e21; font-size: 13px; font-weight: 600;">
+                    Tema
+                </label>
+                <select id="themeSelect" style="width: 100%; padding: 9px 12px; border: 1px solid #d0d5dd; border-radius: 6px; font-size: 13px;">
+                    <option value="light">Claro</option>
+                    <option value="dark">Escuro</option>
+                    <option value="auto">Automático (Sistema)</option>
+                </select>
+            </div>
+
+            <div style="margin-bottom: 16px;">
+                <label style="display: block; margin-bottom: 8px; color: #1c1e21; font-size: 13px; font-weight: 600;">
+                    Tamanho da Janela
+                </label>
+                <select id="windowSizeSelect" style="width: 100%; padding: 9px 12px; border: 1px solid #d0d5dd; border-radius: 6px; font-size: 13px;">
+                    <option value="small">Pequena (480x900)</option>
+                    <option value="medium">Média (600x900)</option>
+                    <option value="large">Grande (800x900)</option>
+                </select>
+            </div>
+
+            <div style="margin-bottom: 16px;">
+                <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                    <input type="checkbox" id="autoStartCheck" style="width: 16px; height: 16px; cursor: pointer;">
+                    <span style="color: #1c1e21; font-size: 13px;">Iniciar com o sistema</span>
+                </label>
+            </div>
+
+            <div style="margin-bottom: 16px;">
+                <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                    <input type="checkbox" id="confirmDeleteCheck" style="width: 16px; height: 16px; cursor: pointer;">
+                    <span style="color: #1c1e21; font-size: 13px;">Confirmar antes de excluir</span>
+                </label>
+            </div>
+
+            <div style="margin-bottom: 16px; padding: 12px; background: #f7f8fa; border-radius: 6px; border: 1px solid #e4e6eb;">
+                <div style="font-size: 11px; color: #65676b; margin-bottom: 4px;">Pasta de dados:</div>
+                <div id="dataPathDisplay" style="font-size: 11px; color: #1c1e21; font-family: monospace; word-break: break-all;"></div>
+            </div>
+            
+            <div class="modal-buttons">
+                <button id="saveSettingsBtn">Salvar</button>
+                <button id="cancelSettingsBtn">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="jsonViewModal" class="modal">
+        <div class="modal-content" style="max-width: 600px; max-height: 80vh;">
+            <h3 id="jsonViewTitle">JSON</h3>
+            <input type="text" id="jsonSearchInput" placeholder="🔍 Buscar no JSON..." style="margin-bottom: 10px;">
+            <pre id="jsonViewContent" class="json-viewer"></pre>
+            <div class="modal-buttons">
+                <button id="closeJsonViewBtn">Fechar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

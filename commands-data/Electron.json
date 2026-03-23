@@ -1,0 +1,205 @@
+{
+  "type": "command",
+  "items": [
+    {
+      "title": "Instalar Electron",
+      "command": "npm install --save-dev electron"
+    },
+    {
+      "title": "Instalar Electron globalmente",
+      "command": "npm install -g electron"
+    },
+    {
+      "title": "Iniciar aplicação Electron",
+      "command": "electron ."
+    },
+    {
+      "title": "Iniciar com npm",
+      "command": "npm start"
+    },
+    {
+      "title": "Iniciar em modo dev",
+      "command": "npm run dev"
+    },
+    {
+      "title": "Instalar Electron Builder",
+      "command": "npm install --save-dev electron-builder"
+    },
+    {
+      "title": "Build para todas as plataformas",
+      "command": "npm run build"
+    },
+    {
+      "title": "Build para Windows",
+      "command": "electron-builder --win"
+    },
+    {
+      "title": "Build para macOS",
+      "command": "electron-builder --mac"
+    },
+    {
+      "title": "Build para Linux",
+      "command": "electron-builder --linux"
+    },
+    {
+      "title": "Build para macOS (DMG)",
+      "command": "electron-builder --mac --x64"
+    },
+    {
+      "title": "Build para macOS (ARM)",
+      "command": "electron-builder --mac --arm64"
+    },
+    {
+      "title": "Build universal macOS",
+      "command": "electron-builder --mac --universal"
+    },
+    {
+      "title": "Build Windows (NSIS)",
+      "command": "electron-builder --win nsis"
+    },
+    {
+      "title": "Build Windows (portable)",
+      "command": "electron-builder --win portable"
+    },
+    {
+      "title": "Build Linux (AppImage)",
+      "command": "electron-builder --linux AppImage"
+    },
+    {
+      "title": "Build Linux (deb)",
+      "command": "electron-builder --linux deb"
+    },
+    {
+      "title": "Build Linux (rpm)",
+      "command": "electron-builder --linux rpm"
+    },
+    {
+      "title": "Instalar Electron Forge",
+      "command": "npm install --save-dev @electron-forge/cli"
+    },
+    {
+      "title": "Inicializar projeto com Forge",
+      "command": "npx create-electron-app meu-app"
+    },
+    {
+      "title": "Forge - Iniciar app",
+      "command": "npm start"
+    },
+    {
+      "title": "Forge - Criar package",
+      "command": "npm run package"
+    },
+    {
+      "title": "Forge - Criar instalador",
+      "command": "npm run make"
+    },
+    {
+      "title": "Forge - Publicar",
+      "command": "npm run publish"
+    },
+    {
+      "title": "Instalar Electron Packager",
+      "command": "npm install --save-dev electron-packager"
+    },
+    {
+      "title": "Packager - Empacotar app",
+      "command": "electron-packager . meu-app --platform=darwin --arch=x64"
+    },
+    {
+      "title": "Instalar DevTools Extension",
+      "command": "npm install --save-dev electron-devtools-installer"
+    },
+    {
+      "title": "Instalar Electron Reload",
+      "command": "npm install --save-dev electron-reload"
+    },
+    {
+      "title": "Instalar Electron Store",
+      "command": "npm install electron-store"
+    },
+    {
+      "title": "Instalar Electron Updater",
+      "command": "npm install electron-updater"
+    },
+    {
+      "title": "Instalar Electron Log",
+      "command": "npm install electron-log"
+    },
+    {
+      "title": "Limpar cache do Electron",
+      "command": "rm -rf ~/Library/Application\\ Support/Electron"
+    },
+    {
+      "title": "Limpar cache do app (macOS)",
+      "command": "rm -rf ~/Library/Application\\ Support/nome-do-app"
+    },
+    {
+      "title": "Ver versão do Electron",
+      "command": "electron --version"
+    },
+    {
+      "title": "Abrir DevTools ao iniciar",
+      "command": "electron . --inspect"
+    },
+    {
+      "title": "Iniciar com debug remoto",
+      "command": "electron --remote-debugging-port=9222 ."
+    },
+    {
+      "title": "Verificar dependências",
+      "command": "npm ls electron"
+    },
+    {
+      "title": "Atualizar Electron",
+      "command": "npm install --save-dev electron@latest"
+    },
+    {
+      "title": "Instalar Spectron (testes)",
+      "command": "npm install --save-dev spectron"
+    },
+    {
+      "title": "Executar testes",
+      "command": "npm test"
+    },
+    {
+      "title": "Build e publicar no GitHub",
+      "command": "electron-builder --publish always"
+    },
+    {
+      "title": "Build sem publicar",
+      "command": "electron-builder --publish never"
+    },
+    {
+      "title": "Gerar ícones",
+      "command": "electron-icon-builder --input=./icon.png --output=./build"
+    },
+    {
+      "title": "Assinar app macOS",
+      "command": "electron-builder --mac --sign"
+    },
+    {
+      "title": "Notarizar app macOS",
+      "command": "electron-builder --mac --notarize"
+    },
+    {
+      "title": "Ver logs do build",
+      "command": "DEBUG=electron-builder electron-builder"
+    },
+    {
+      "title": "Limpar dist",
+      "command": "rm -rf dist"
+    },
+    {
+      "title": "Rebuild módulos nativos",
+      "command": "electron-rebuild"
+    },
+    {
+      "title": "Instalar electron-rebuild",
+      "command": "npm install --save-dev electron-rebuild"
+    },
+    {
+      "title": "Verificar compatibilidade ABI",
+      "command": "electron --abi"
+    }
+  ]
+}

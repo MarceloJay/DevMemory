@@ -1,0 +1,161 @@
+{
+  "type": "command",
+  "items": [
+    {
+      "title": "Inicializar repositório",
+      "command": "git init"
+    },
+    {
+      "title": "Adicionar todos os arquivos",
+      "command": "git add ."
+    },
+    {
+      "title": "Commit com mensagem",
+      "command": "git commit -m \"mensagem\""
+    },
+    {
+      "title": "Amend - Alterar último commit",
+      "command": "git commit --amend -m \"nova mensagem\""
+    },
+    {
+      "title": "Amend sem alterar mensagem",
+      "command": "git commit --amend --no-edit"
+    },
+    {
+      "title": "Ver status",
+      "command": "git status"
+    },
+    {
+      "title": "Ver histórico completo",
+      "command": "git log"
+    },
+    {
+      "title": "Ver histórico resumido",
+      "command": "git log --oneline"
+    },
+    {
+      "title": "Ver histórico com gráfico",
+      "command": "git log --oneline --graph --all"
+    },
+    {
+      "title": "Criar nova branch",
+      "command": "git checkout -b nome-da-branch"
+    },
+    {
+      "title": "Mudar de branch",
+      "command": "git checkout nome-da-branch"
+    },
+    {
+      "title": "Listar todas as branches",
+      "command": "git branch -a"
+    },
+    {
+      "title": "Deletar branch local",
+      "command": "git branch -d nome-da-branch"
+    },
+    {
+      "title": "Forçar deletar branch local",
+      "command": "git branch -D nome-da-branch"
+    },
+    {
+      "title": "Deletar branch remota",
+      "command": "git push origin --delete nome-da-branch"
+    },
+    {
+      "title": "Reset soft - Desfaz commit mantém alterações",
+      "command": "git reset --soft HEAD~1"
+    },
+    {
+      "title": "Reset mixed - Desfaz commit e staging",
+      "command": "git reset HEAD~1"
+    },
+    {
+      "title": "Reset hard - Desfaz tudo (CUIDADO!)",
+      "command": "git reset --hard HEAD~1"
+    },
+    {
+      "title": "Force push (CUIDADO!)",
+      "command": "git push --force origin nome-da-branch"
+    },
+    {
+      "title": "Force push com lease (mais seguro)",
+      "command": "git push --force-with-lease origin nome-da-branch"
+    },
+    {
+      "title": "Ver diferenças",
+      "command": "git diff"
+    },
+    {
+      "title": "Ver diferenças staged",
+      "command": "git diff --staged"
+    },
+    {
+      "title": "Stash - Guardar alterações temporariamente",
+      "command": "git stash"
+    },
+    {
+      "title": "Stash com mensagem",
+      "command": "git stash save \"mensagem\""
+    },
+    {
+      "title": "Aplicar último stash",
+      "command": "git stash pop"
+    },
+    {
+      "title": "Listar stashes",
+      "command": "git stash list"
+    },
+    {
+      "title": "Desfazer alterações em arquivo",
+      "command": "git checkout -- nome-do-arquivo"
+    },
+    {
+      "title": "Limpar arquivos não rastreados",
+      "command": "git clean -fd"
+    },
+    {
+      "title": "Ver configurações",
+      "command": "git config --list"
+    },
+    {
+      "title": "Configurar nome de usuário",
+      "command": "git config --global user.name \"Seu Nome\""
+    },
+    {
+      "title": "Configurar email",
+      "command": "git config --global user.email \"seu@email.com\""
+    },
+    {
+      "title": "Listar chaves SSH",
+      "command": "ls -la ~/.ssh"
+    },
+    {
+      "title": "Ver chave SSH pública",
+      "command": "cat ~/.ssh/id_rsa.pub"
+    },
+    {
+      "title": "Gerar nova chave SSH",
+      "command": "ssh-keygen -t ed25519 -C \"seu@email.com\""
+    },
+    {
+      "title": "Testar conexão SSH GitHub",
+      "command": "ssh -T git@github.com"
+    },
+    {
+      "title": "Adicionar chave ao ssh-agent",
+      "command": "ssh-add ~/.ssh/id_rsa"
+    },
+    {
+      "title": "Iniciar ssh-agent",
+      "command": "eval \"$(ssh-agent -s)\""
+    },
+    {
+      "title": "Listar credenciais salvas",
+      "command": "git config --global credential.helper"
+    },
+    {
+      "title": "Limpar credenciais do cache",
+      "command": "git credential-cache exit"
+    }
+  ]
+}

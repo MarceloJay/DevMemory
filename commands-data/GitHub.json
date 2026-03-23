@@ -1,0 +1,37 @@
+{
+  "type": "command",
+  "items": [
+    {
+      "title": "Clonar repositório",
+      "command": "git clone https://github.com/usuario/repo.git"
+    },
+    {
+      "title": "Adicionar remote origin",
+      "command": "git remote add origin https://github.com/usuario/repo.git"
+    },
+    {
+      "title": "Push para main",
+      "command": "git push origin main"
+    },
+    {
+      "title": "Push primeira vez",
+      "command": "git push -u origin main"
+    },
+    {
+      "title": "Pull do repositório",
+      "command": "git pull origin main"
+    },
+    {
+      "title": "Ver remotes",
+      "command": "git remote -v"
+    },
+    {
+      "title": "Fork - adicionar upstream",
+      "command": "git remote add upstream https://github.com/original/repo.git"
+    },
+    {
+      "title": "Atualizar fork",
+      "command": "git fetch upstream && git merge upstream/main"
+    }
+  ]
+}

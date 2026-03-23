@@ -1,0 +1,145 @@
+{
+  "type": "command",
+  "items": [
+    {
+      "title": "Listar pods",
+      "command": "kubectl get pods"
+    },
+    {
+      "title": "Listar pods de todos os namespaces",
+      "command": "kubectl get pods --all-namespaces"
+    },
+    {
+      "title": "Executar comando no pod",
+      "command": "kubectl exec -it nome-do-pod -- bash"
+    },
+    {
+      "title": "Listar pods com detalhes",
+      "command": "kubectl get pods -o wide"
+    },
+    {
+      "title": "Descrever pod",
+      "command": "kubectl describe pod nome-do-pod"
+    },
+    {
+      "title": "Ver logs do pod",
+      "command": "kubectl logs nome-do-pod"
+    },
+    {
+      "title": "Ver logs em tempo real",
+      "command": "kubectl logs -f nome-do-pod"
+    },
+    {
+      "title": "Deletar pod",
+      "command": "kubectl delete pod nome-do-pod"
+    },
+    {
+      "title": "Listar deployments",
+      "command": "kubectl get deployments"
+    },
+    {
+      "title": "Descrever deployment",
+      "command": "kubectl describe deployment nome-do-deployment"
+    },
+    {
+      "title": "Escalar deployment",
+      "command": "kubectl scale deployment nome-do-deployment --replicas=3"
+    },
+    {
+      "title": "Atualizar imagem do deployment",
+      "command": "kubectl set image deployment/nome-do-deployment container=imagem:tag"
+    },
+    {
+      "title": "Rollback deployment",
+      "command": "kubectl rollout undo deployment/nome-do-deployment"
+    },
+    {
+      "title": "Ver status do rollout",
+      "command": "kubectl rollout status deployment/nome-do-deployment"
+    },
+    {
+      "title": "Listar services",
+      "command": "kubectl get services"
+    },
+    {
+      "title": "Listar nodes",
+      "command": "kubectl get nodes"
+    },
+    {
+      "title": "Descrever node",
+      "command": "kubectl describe node nome-do-node"
+    },
+    {
+      "title": "Listar namespaces",
+      "command": "kubectl get namespaces"
+    },
+    {
+      "title": "Criar namespace",
+      "command": "kubectl create namespace nome-do-namespace"
+    },
+    {
+      "title": "Mudar contexto para namespace",
+      "command": "kubectl config set-context --current --namespace=nome-do-namespace"
+    },
+    {
+      "title": "Aplicar arquivo YAML",
+      "command": "kubectl apply -f arquivo.yaml"
+    },
+    {
+      "title": "Deletar recurso do arquivo",
+      "command": "kubectl delete -f arquivo.yaml"
+    },
+    {
+      "title": "Ver configuração do cluster",
+      "command": "kubectl config view"
+    },
+    {
+      "title": "Ver contextos disponíveis",
+      "command": "kubectl config get-contexts"
+    },
+    {
+      "title": "Mudar de contexto",
+      "command": "kubectl config use-context nome-do-contexto"
+    },
+    {
+      "title": "Listar configmaps",
+      "command": "kubectl get configmaps"
+    },
+    {
+      "title": "Listar secrets",
+      "command": "kubectl get secrets"
+    },
+    {
+      "title": "Criar secret genérico",
+      "command": "kubectl create secret generic nome-do-secret --from-literal=key=value"
+    },
+    {
+      "title": "Port forward para pod",
+      "command": "kubectl port-forward pod/nome-do-pod 8080:80"
+    },
+    {
+      "title": "Ver eventos do cluster",
+      "command": "kubectl get events --sort-by=.metadata.creationTimestamp"
+    },
+    {
+      "title": "Ver uso de recursos dos nodes",
+      "command": "kubectl top nodes"
+    },
+    {
+      "title": "Ver uso de recursos dos pods",
+      "command": "kubectl top pods"
+    },
+    {
+      "title": "Listar persistent volumes",
+      "command": "kubectl get pv"
+    },
+    {
+      "title": "Listar persistent volume claims",
+      "command": "kubectl get pvc"
+    },
+    {
+      "title": "Forçar deletar pod",
+      "command": "kubectl delete pod nome-do-pod --grace-period=0 --force"
+    }
+  ]
+}

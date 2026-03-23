@@ -1,0 +1,117 @@
+{
+  "type": "command",
+  "items": [
+    {
+      "title": "Criar ambiente virtual (venv)",
+      "command": "python -m venv venv"
+    },
+    {
+      "title": "Ativar venv (macOS/Linux)",
+      "command": "source venv/bin/activate"
+    },
+    {
+      "title": "Ativar venv (Windows)",
+      "command": "venv\\Scripts\\activate"
+    },
+    {
+      "title": "Instalar dependências do requirements.txt",
+      "command": "pip install -r requirements.txt"
+    },
+    {
+      "title": "Rodar projeto Python",
+      "command": "python main.py"
+    },
+    {
+      "title": "Rodar projeto com módulo",
+      "command": "python -m nome_do_modulo"
+    },
+    {
+      "title": "Desativar ambiente virtual",
+      "command": "deactivate"
+    },
+    {
+      "title": "Gerar requirements.txt",
+      "command": "pip freeze > requirements.txt"
+    },
+    {
+      "title": "Atualizar pip",
+      "command": "pip install --upgrade pip"
+    },
+    {
+      "title": "Instalar pacote específico",
+      "command": "pip install nome-do-pacote"
+    },
+    {
+      "title": "Instalar pacote em versão específica",
+      "command": "pip install nome-do-pacote==1.0.0"
+    },
+    {
+      "title": "Desinstalar pacote",
+      "command": "pip uninstall nome-do-pacote"
+    },
+    {
+      "title": "Listar pacotes instalados",
+      "command": "pip list"
+    },
+    {
+      "title": "Ver informações de um pacote",
+      "command": "pip show nome-do-pacote"
+    },
+    {
+      "title": "Verificar versão do Python",
+      "command": "python --version"
+    },
+    {
+      "title": "Rodar script Python",
+      "command": "python script.py"
+    },
+    {
+      "title": "Rodar Python interativo",
+      "command": "python"
+    },
+    {
+      "title": "Rodar com Flask (desenvolvimento)",
+      "command": "flask run"
+    },
+    {
+      "title": "Rodar com Flask (debug)",
+      "command": "flask run --debug"
+    },
+    {
+      "title": "Rodar Django (desenvolvimento)",
+      "command": "python manage.py runserver"
+    },
+    {
+      "title": "Django - Criar migrações",
+      "command": "python manage.py makemigrations"
+    },
+    {
+      "title": "Django - Aplicar migrações",
+      "command": "python manage.py migrate"
+    },
+    {
+      "title": "Django - Criar superusuário",
+      "command": "python manage.py createsuperuser"
+    },
+    {
+      "title": "Rodar testes com pytest",
+      "command": "pytest"
+    },
+    {
+      "title": "Rodar testes com unittest",
+      "command": "python -m unittest discover"
+    },
+    {
+      "title": "Formatar código com black",
+      "command": "black ."
+    },
+    {
+      "title": "Verificar código com flake8",
+      "command": "flake8 ."
+    },
+    {
+      "title": "Verificar tipos com mypy",
+      "command": "mypy ."
+    }
+  ]
+}

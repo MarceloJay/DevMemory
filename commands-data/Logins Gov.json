@@ -1,0 +1,20 @@
+{
+  "type": "credential",
+  "items": [
+    {
+      "title": "CPF: 18355748077",
+      "login": "18355748077",
+      "password": "Fnde123!"
+    },
+    {
+      "title": "CPF: 00877629005",
+      "login": "00877629005",
+      "password": "Fnde123!"
+    },
+    {
+      "title": "CPF: 46356341084",
+      "login": "46356341084",
+      "password": "Nees.ufal1"
+    }
+  ]
+}

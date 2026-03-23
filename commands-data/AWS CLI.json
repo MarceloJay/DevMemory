@@ -1,0 +1,237 @@
+{
+  "type": "command",
+  "items": [
+    {
+      "title": "Configurar AWS CLI",
+      "command": "aws configure"
+    },
+    {
+      "title": "Listar perfis configurados",
+      "command": "aws configure list-profiles"
+    },
+    {
+      "title": "Ver configuração atual",
+      "command": "aws configure list"
+    },
+    {
+      "title": "Listar buckets S3",
+      "command": "aws s3 ls"
+    },
+    {
+      "title": "Listar conteúdo do bucket",
+      "command": "aws s3 ls s3://nome-do-bucket/"
+    },
+    {
+      "title": "Copiar arquivo para S3",
+      "command": "aws s3 cp arquivo.txt s3://nome-do-bucket/"
+    },
+    {
+      "title": "Copiar arquivo do S3",
+      "command": "aws s3 cp s3://nome-do-bucket/arquivo.txt ."
+    },
+    {
+      "title": "Sincronizar pasta com S3",
+      "command": "aws s3 sync ./pasta s3://nome-do-bucket/"
+    },
+    {
+      "title": "Remover arquivo do S3",
+      "command": "aws s3 rm s3://nome-do-bucket/arquivo.txt"
+    },
+    {
+      "title": "Criar bucket S3",
+      "command": "aws s3 mb s3://nome-do-bucket"
+    },
+    {
+      "title": "Remover bucket S3",
+      "command": "aws s3 rb s3://nome-do-bucket --force"
+    },
+    {
+      "title": "Listar instâncias EC2",
+      "command": "aws ec2 describe-instances"
+    },
+    {
+      "title": "Listar instâncias EC2 (resumido)",
+      "command": "aws ec2 describe-instances --query 'Reservations[*].Instances[*].[InstanceId,State.Name,InstanceType,PublicIpAddress]' --output table"
+    },
+    {
+      "title": "Iniciar instância EC2",
+      "command": "aws ec2 start-instances --instance-ids i-1234567890abcdef0"
+    },
+    {
+      "title": "Parar instância EC2",
+      "command": "aws ec2 stop-instances --instance-ids i-1234567890abcdef0"
+    },
+    {
+      "title": "Reiniciar instância EC2",
+      "command": "aws ec2 reboot-instances --instance-ids i-1234567890abcdef0"
+    },
+    {
+      "title": "Terminar instância EC2",
+      "command": "aws ec2 terminate-instances --instance-ids i-1234567890abcdef0"
+    },
+    {
+      "title": "Listar security groups",
+      "command": "aws ec2 describe-security-groups"
+    },
+    {
+      "title": "Listar key pairs",
+      "command": "aws ec2 describe-key-pairs"
+    },
+    {
+      "title": "Listar AMIs",
+      "command": "aws ec2 describe-images --owners self"
+    },
+    {
+      "title": "Listar volumes EBS",
+      "command": "aws ec2 describe-volumes"
+    },
+    {
+      "title": "Criar snapshot",
+      "command": "aws ec2 create-snapshot --volume-id vol-1234567890abcdef0 --description 'Meu snapshot'"
+    },
+    {
+      "title": "Listar snapshots",
+      "command": "aws ec2 describe-snapshots --owner-ids self"
+    },
+    {
+      "title": "Listar VPCs",
+      "command": "aws ec2 describe-vpcs"
+    },
+    {
+      "title": "Listar subnets",
+      "command": "aws ec2 describe-subnets"
+    },
+    {
+      "title": "Listar tabelas DynamoDB",
+      "command": "aws dynamodb list-tables"
+    },
+    {
+      "title": "Descrever tabela DynamoDB",
+      "command": "aws dynamodb describe-table --table-name nome-da-tabela"
+    },
+    {
+      "title": "Listar funções Lambda",
+      "command": "aws lambda list-functions"
+    },
+    {
+      "title": "Invocar função Lambda",
+      "command": "aws lambda invoke --function-name nome-da-funcao output.json"
+    },
+    {
+      "title": "Ver logs Lambda",
+      "command": "aws logs tail /aws/lambda/nome-da-funcao --follow"
+    },
+    {
+      "title": "Listar clusters ECS",
+      "command": "aws ecs list-clusters"
+    },
+    {
+      "title": "Listar serviços ECS",
+      "command": "aws ecs list-services --cluster nome-do-cluster"
+    },
+    {
+      "title": "Listar tasks ECS",
+      "command": "aws ecs list-tasks --cluster nome-do-cluster"
+    },
+    {
+      "title": "Listar clusters EKS",
+      "command": "aws eks list-clusters"
+    },
+    {
+      "title": "Descrever cluster EKS",
+      "command": "aws eks describe-cluster --name nome-do-cluster"
+    },
+    {
+      "title": "Atualizar kubeconfig para EKS",
+      "command": "aws eks update-kubeconfig --name nome-do-cluster --region us-east-1"
+    },
+    {
+      "title": "Listar repositórios ECR",
+      "command": "aws ecr describe-repositories"
+    },
+    {
+      "title": "Login no ECR",
+      "command": "aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 123456789012.dkr.ecr.us-east-1.amazonaws.com"
+    },
+    {
+      "title": "Listar filas SQS",
+      "command": "aws sqs list-queues"
+    },
+    {
+      "title": "Enviar mensagem para SQS",
+      "command": "aws sqs send-message --queue-url https://sqs.us-east-1.amazonaws.com/123456789012/MyQueue --message-body 'Minha mensagem'"
+    },
+    {
+      "title": "Listar tópicos SNS",
+      "command": "aws sns list-topics"
+    },
+    {
+      "title": "Publicar no SNS",
+      "command": "aws sns publish --topic-arn arn:aws:sns:us-east-1:123456789012:MyTopic --message 'Minha mensagem'"
+    },
+    {
+      "title": "Listar distribuições CloudFront",
+      "command": "aws cloudfront list-distributions"
+    },
+    {
+      "title": "Criar invalidação CloudFront",
+      "command": "aws cloudfront create-invalidation --distribution-id E1234567890ABC --paths '/*'"
+    },
+    {
+      "title": "Listar hosted zones Route53",
+      "command": "aws route53 list-hosted-zones"
+    },
+    {
+      "title": "Listar stacks CloudFormation",
+      "command": "aws cloudformation list-stacks"
+    },
+    {
+      "title": "Descrever stack CloudFormation",
+      "command": "aws cloudformation describe-stacks --stack-name nome-do-stack"
+    },
+    {
+      "title": "Listar secrets do Secrets Manager",
+      "command": "aws secretsmanager list-secrets"
+    },
+    {
+      "title": "Obter valor do secret",
+      "command": "aws secretsmanager get-secret-value --secret-id nome-do-secret"
+    },
+    {
+      "title": "Listar parâmetros SSM",
+      "command": "aws ssm describe-parameters"
+    },
+    {
+      "title": "Obter parâmetro SSM",
+      "command": "aws ssm get-parameter --name /caminho/do/parametro --with-decryption"
+    },
+    {
+      "title": "Listar usuários IAM",
+      "command": "aws iam list-users"
+    },
+    {
+      "title": "Listar roles IAM",
+      "command": "aws iam list-roles"
+    },
+    {
+      "title": "Listar políticas IAM",
+      "command": "aws iam list-policies --scope Local"
+    },
+    {
+      "title": "Ver identidade atual",
+      "command": "aws sts get-caller-identity"
+    },
+    {
+      "title": "Listar regiões disponíveis",
+      "command": "aws ec2 describe-regions --output table"
+    },
+    {
+      "title": "Listar zonas de disponibilidade",
+      "command": "aws ec2 describe-availability-zones --region us-east-1"
+    },
+    {
+      "title": "Ver custos do mês atual",
+      "command": "aws ce get-cost-and-usage --time-period Start=2024-01-01,End=2024-01-31 --granularity MONTHLY --metrics BlendedCost"
+    }
+  ]
+}

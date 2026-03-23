@@ -1,0 +1,9 @@
+{
+  "type": "json",
+  "items": [
+    {
+      "title": "Retorno auth Gov",
+      "content": "{\n  \"at_hash\": \"gqiPnvwHg2iLqpJ_5c7axQ\",\n  \"sub\": \"8b44d668-c4d4-4fe3-a1d3-a9e01067f6bf\",\n  \"cognito:groups\": [\n    \"sa-east-1_bEaTlbvIj_Gov.BR\"\n  ],\n  \"email_verified\": false,\n  \"iss\": \"https://cognito-idp.sa-east-1.amazonaws.com/sa-east-1_bEaTlbvIj\",\n  \"cognito:username\": \"gov.br_18355748077\",\n  \"nonce\": \"zaLdTMNQpMT57TJ4U4yKgAL6Gc8miDqOKMEH6O7e3Qx2NAoa47f9I_efuPV0LP2EfGwIg4bd7zH19W3xSrCpubKGBF5Fm8Motx3a7JazL4JbdaqVpGoDOvcmOPcrxgdFCat5yN481Ns9Sweym53kz8z8jlY3TblKtGKXJqIC8o4\",\n  \"origin_jti\": \"597034cf-4476-4a38-a883-68fa07a29845\",\n  \"aud\": \"6cls4ooivhta3dp4umo9ea4n3s\",\n  \"identities\": [\n    {\n      \"userId\": \"18355748077\",\n      \"providerName\": \"Gov.BR\",\n      \"providerType\": \"OIDC\",\n      \"issuer\": null,\n      \"primary\": \"true\",\n      \"dateCreated\": \"1771425310287\"\n    }\n  ],\n  \"token_use\": \"id\",\n  \"auth_time\": 1773120125,\n  \"name\": \"Meu Nome\",\n  \"exp\": 1773120725,\n  \"iat\": 1773120126,\n  \"jti\": \"afaf00c5-75f6-42cc-b15a-31e2263c4702\",\n  \"email\": \"jose.ferreira+123@nees.ufal.br\"\n}"
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "type": "command",
+  "items": [
+    {
+      "title": "Listar containers ativos",
+      "command": "docker ps"
+    },
+    {
+      "title": "Listar todos os containers",
+      "command": "docker ps -a"
+    },
+    {
+      "title": "Listar imagens",
+      "command": "docker images"
+    },
+    {
+      "title": "Baixar imagem",
+      "command": "docker pull nome-da-imagem:tag"
+    },
+    {
+      "title": "Criar e iniciar container",
+      "command": "docker run -d --name meu-container nome-da-imagem"
+    },
+    {
+      "title": "Iniciar container",
+      "command": "docker start nome-do-container"
+    },
+    {
+      "title": "Parar container",
+      "command": "docker stop nome-do-container"
+    },
+    {
+      "title": "Reiniciar container",
+      "command": "docker restart nome-do-container"
+    },
+    {
+      "title": "Remover container",
+      "command": "docker rm nome-do-container"
+    },
+    {
+      "title": "Forçar remoção de container",
+      "command": "docker rm -f nome-do-container"
+    },
+    {
+      "title": "Remover imagem",
+      "command": "docker rmi nome-da-imagem"
+    },
+    {
+      "title": "Ver logs do container",
+      "command": "docker logs nome-do-container"
+    },
+    {
+      "title": "Ver logs em tempo real",
+      "command": "docker logs -f nome-do-container"
+    },
+    {
+      "title": "Executar comando no container",
+      "command": "docker exec -it nome-do-container bash"
+    },
+    {
+      "title": "Inspecionar container",
+      "command": "docker inspect nome-do-container"
+    },
+    {
+      "title": "Ver estatísticas dos containers",
+      "command": "docker stats"
+    },
+    {
+      "title": "Construir imagem",
+      "command": "docker build -t nome-da-imagem:tag ."
+    },
+    {
+      "title": "Criar volume",
+      "command": "docker volume create nome-do-volume"
+    },
+    {
+      "title": "Listar volumes",
+      "command": "docker volume ls"
+    },
+    {
+      "title": "Remover volume",
+      "command": "docker volume rm nome-do-volume"
+    },
+    {
+      "title": "Listar redes",
+      "command": "docker network ls"
+    },
+    {
+      "title": "Criar rede",
+      "command": "docker network create nome-da-rede"
+    },
+    {
+      "title": "Limpar containers parados",
+      "command": "docker container prune"
+    },
+    {
+      "title": "Limpar imagens não utilizadas",
+      "command": "docker image prune"
+    },
+    {
+      "title": "Limpar tudo (CUIDADO!)",
+      "command": "docker system prune -a"
+    },
+    {
+      "title": "Docker Compose - Subir serviços",
+      "command": "docker-compose up -d"
+    },
+    {
+      "title": "Docker Compose - Parar serviços",
+      "command": "docker-compose down"
+    },
+    {
+      "title": "Docker Compose - Ver logs",
+      "command": "docker-compose logs -f"
+    },
+    {
+      "title": "Copiar arquivo para container",
+      "command": "docker cp arquivo.txt nome-do-container:/caminho/"
+    },
+    {
+      "title": "Copiar arquivo do container",
+      "command": "docker cp nome-do-container:/caminho/arquivo.txt ."
+    }
+  ]
+}

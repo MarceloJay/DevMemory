@@ -1,0 +1,225 @@
+{
+  "type": "command",
+  "items": [
+    {
+      "title": "Instalar dependências",
+      "command": "npm install"
+    },
+    {
+      "title": "Instalar pacote",
+      "command": "npm install nome-do-pacote"
+    },
+    {
+      "title": "Instalar pacote como dev",
+      "command": "npm install --save-dev nome-do-pacote"
+    },
+    {
+      "title": "Instalar pacote globalmente",
+      "command": "npm install -g nome-do-pacote"
+    },
+    {
+      "title": "Desinstalar pacote",
+      "command": "npm uninstall nome-do-pacote"
+    },
+    {
+      "title": "Atualizar pacote",
+      "command": "npm update nome-do-pacote"
+    },
+    {
+      "title": "Atualizar todos os pacotes",
+      "command": "npm update"
+    },
+    {
+      "title": "Verificar pacotes desatualizados",
+      "command": "npm outdated"
+    },
+    {
+      "title": "Iniciar servidor de desenvolvimento",
+      "command": "npm run dev"
+    },
+    {
+      "title": "Build para produção",
+      "command": "npm run build"
+    },
+    {
+      "title": "Iniciar aplicação",
+      "command": "npm start"
+    },
+    {
+      "title": "Executar testes",
+      "command": "npm test"
+    },
+    {
+      "title": "Executar testes em watch mode",
+      "command": "npm test -- --watch"
+    },
+    {
+      "title": "Executar linter",
+      "command": "npm run lint"
+    },
+    {
+      "title": "Corrigir problemas do linter",
+      "command": "npm run lint -- --fix"
+    },
+    {
+      "title": "Ver scripts disponíveis",
+      "command": "npm run"
+    },
+    {
+      "title": "Limpar cache do npm",
+      "command": "npm cache clean --force"
+    },
+    {
+      "title": "Verificar vulnerabilidades",
+      "command": "npm audit"
+    },
+    {
+      "title": "Corrigir vulnerabilidades",
+      "command": "npm audit fix"
+    },
+    {
+      "title": "Corrigir vulnerabilidades (force)",
+      "command": "npm audit fix --force"
+    },
+    {
+      "title": "Listar pacotes instalados",
+      "command": "npm list"
+    },
+    {
+      "title": "Listar pacotes globais",
+      "command": "npm list -g --depth=0"
+    },
+    {
+      "title": "Ver informações do pacote",
+      "command": "npm info nome-do-pacote"
+    },
+    {
+      "title": "Buscar pacotes",
+      "command": "npm search termo-de-busca"
+    },
+    {
+      "title": "Inicializar projeto",
+      "command": "npm init"
+    },
+    {
+      "title": "Inicializar projeto (modo rápido)",
+      "command": "npm init -y"
+    },
+    {
+      "title": "Publicar pacote",
+      "command": "npm publish"
+    },
+    {
+      "title": "Login no npm",
+      "command": "npm login"
+    },
+    {
+      "title": "Ver versão do npm",
+      "command": "npm --version"
+    },
+    {
+      "title": "Ver versão do Node",
+      "command": "node --version"
+    },
+    {
+      "title": "Executar arquivo Node",
+      "command": "node arquivo.js"
+    },
+    {
+      "title": "Executar com nodemon",
+      "command": "nodemon arquivo.js"
+    },
+    {
+      "title": "Yarn - Instalar dependências",
+      "command": "yarn install"
+    },
+    {
+      "title": "Yarn - Adicionar pacote",
+      "command": "yarn add nome-do-pacote"
+    },
+    {
+      "title": "Yarn - Adicionar pacote dev",
+      "command": "yarn add --dev nome-do-pacote"
+    },
+    {
+      "title": "Yarn - Remover pacote",
+      "command": "yarn remove nome-do-pacote"
+    },
+    {
+      "title": "Yarn - Iniciar dev",
+      "command": "yarn dev"
+    },
+    {
+      "title": "Yarn - Build",
+      "command": "yarn build"
+    },
+    {
+      "title": "Yarn - Start",
+      "command": "yarn start"
+    },
+    {
+      "title": "Yarn - Test",
+      "command": "yarn test"
+    },
+    {
+      "title": "pnpm - Instalar dependências",
+      "command": "pnpm install"
+    },
+    {
+      "title": "pnpm - Adicionar pacote",
+      "command": "pnpm add nome-do-pacote"
+    },
+    {
+      "title": "pnpm - Remover pacote",
+      "command": "pnpm remove nome-do-pacote"
+    },
+    {
+      "title": "pnpm - Dev",
+      "command": "pnpm dev"
+    },
+    {
+      "title": "pnpm - Build",
+      "command": "pnpm build"
+    },
+    {
+      "title": "npx - Executar pacote sem instalar",
+      "command": "npx nome-do-pacote"
+    },
+    {
+      "title": "npx - Create React App",
+      "command": "npx create-react-app meu-app"
+    },
+    {
+      "title": "npx - Create Next App",
+      "command": "npx create-next-app@latest meu-app"
+    },
+    {
+      "title": "npx - Create Vite App",
+      "command": "npx create-vite@latest meu-app"
+    },
+    {
+      "title": "Remover node_modules",
+      "command": "rm -rf node_modules"
+    },
+    {
+      "title": "Reinstalar dependências",
+      "command": "rm -rf node_modules package-lock.json && npm install"
+    },
+    {
+      "title": "Ver uso de espaço do node_modules",
+      "command": "du -sh node_modules"
+    },
+    {
+      "title": "Gerar package-lock.json",
+      "command": "npm install --package-lock-only"
+    },
+    {
+      "title": "Instalar versão específica",
+      "command": "npm install nome-do-pacote@1.2.3"
+    },
+    {
+      "title": "Instalar última versão",
+      "command": "npm install nome-do-pacote@latest"
+    }
+  ]
+}
