@@ -2,7 +2,7 @@
 
 **DevMemory** é um gerenciador desktop de comandos, credenciais e snippets desenvolvido com Electron. Mantenha seus comandos mais usados, credenciais e trechos de código sempre à mão, organizados por tópicos.
 
-![DevMemory Screenshot 1](print1.png)
+![DevMemory Screenshot 1](print2.png)
 
 ## ✨ Funcionalidades
 
@@ -21,7 +21,7 @@
 - ↕️ **Organização**: Reordene itens por drag-and-drop
 - ✏️ **Edição**: Edite nomes de tópicos facilmente
 
-![DevMemory Screenshot 2](print2.png)
+![DevMemory Screenshot 2](print1.png)
 
 ## 🚀 Instalação
 
